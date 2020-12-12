@@ -1,0 +1,44 @@
+@font-face
+  font-family: yas-primary
+  src: url("../font/main.otf") format("opentype")
+
+@font-face
+  font-family: yas-secondary
+  src: url("../font/secondary.woff") format('woff')
+
+%font-family-primary
+  font: normal 100% yas-primary
+
+%font-family-secondary
+  font: normal 100% yas-secondary
+
+%font-size-small
+  font-size: 1rem
+
+%font-size-medium
+  font-size: 1.5rem
+
+%font-size-large
+  font-size: 2rem
+  font-weight: bold
+
+%font-size-xlarge
+  font-size: 2.5rem
+  font-weight: bold
+
+
+%font-color-green-dark
+  @extend %font-family-primary
+  color: $color-yasen-green-dark
+
+%font-color-green
+  @extend %font-family-secondary
+  color: $color-yasen-green
+
+%font-color-brown
+  @extend %font-family-primary
+  color: $color-yasen-brown
+
+%font-color-yellow
+  @extend %font-family-primary
+  color: $color-yasen-yellow

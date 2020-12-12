@@ -1,0 +1,18 @@
+$color-yasen-green-light: #78ffd6;
+$color-yasen-green-dark: #1e3c00;
+$color-yasen-green: #8cba51;
+$color-yasen-yellow: #f2f3bc;
+$color-yasen-blue-light: #2255dd;
+$color-yasen-white: #feffee;
+$color-yasen-brown: #460000;
+$color-yasen-cream: #fadfb6;
+
+// Reassign bulma variables
+$success: $color-yasen-green;
+$modal-background-background-color: rgba($color-yasen-yellow, 0.96);
+
+$section-max-width: 70rem;
+$stock-card-min-width: 13rem;
+$stock-card-max-width: 19rem;
+$marquiz-quiz-limit-width: 1400px;
+

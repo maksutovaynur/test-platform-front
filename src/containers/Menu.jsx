@@ -72,7 +72,7 @@ const MainMenu = props => {
       <AppBar position="sticky" color="transparent">
         <Toolbar variant='dense'>
           <Typography variant="h6" className={classes.title}>
-            Photos
+            Masterminds Test Platform
           </Typography>
           {isMobile ? (
             <div>

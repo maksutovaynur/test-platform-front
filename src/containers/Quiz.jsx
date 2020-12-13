@@ -22,9 +22,11 @@ function getAnswer(quiz_id, question_key) {
 }
 
 function Question (props) {
-    const {number, question_text, options, setAnswer, answerGiven, question_key} = props;
-    return (<div>
+    const {number, question_text, question_group_text, options,
+        setAnswer, answerGiven, question_key} = props;
+    return (<div className="question">
         <h2>#{number}</h2>
+        <div className="q-group" dangerouslySetInnerHTML={{__html: question_group_text}}/>
         <div dangerouslySetInnerHTML={{__html: question_text}}/>
         <div>{
             Object.keys(options).map(k => {

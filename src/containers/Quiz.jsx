@@ -21,13 +21,23 @@ function getAnswer(quiz_id, question_key) {
     return localStorage.getItem(`${quiz_id}/${question_key}`) || undefined;
 }
 
+function QuestionMark ({children, number}) {
+    return (<div className="q-text">
+        Question #{number} text:
+        {children}
+    </div>)
+}
+
 function Question (props) {
     const {number, question_text, question_group_text, options,
-        setAnswer, answerGiven, question_key} = props;
+        setAnswer, answerGiven, question_key, chapter_key} = props;
     return (<div className="question">
         <h2>#{number}</h2>
+        <i>[{chapter_key}]-{question_key}</i>
         <div className="q-group" dangerouslySetInnerHTML={{__html: question_group_text}}/>
+        <QuestionMark number={number}>
         <div dangerouslySetInnerHTML={{__html: question_text}}/>
+        </QuestionMark>
         <div>{
             Object.keys(options).map(k => {
                 const o = options[k];
